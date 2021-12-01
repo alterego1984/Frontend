@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SeguridadRoutingModule } from './seguridad-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RecordarContrasenaComponent } from './recordar-contrasena/recordar-contrasena.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,7 +14,9 @@ import { RecordarContrasenaComponent } from './recordar-contrasena/recordar-cont
   ],
   imports: [
     CommonModule,
-    SeguridadRoutingModule
+    SeguridadRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class SeguridadModule { }

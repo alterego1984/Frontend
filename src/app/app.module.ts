@@ -7,6 +7,7 @@ import { BarraNavegacionComponent } from './template/barra-navegacion/barra-nave
 import { PiePaginaComponent } from './template/pie-pagina/pie-pagina.component';
 import { InicioComponent } from './template/inicio/inicio.component';
 import { ErrorComponent } from './template/error/error.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ErrorComponent } from './template/error/error.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

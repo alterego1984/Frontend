@@ -1,6 +1,7 @@
 import { SafeKeyedRead } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import * as cryptoJS from "crypto-js";
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
 
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
     "clave": ["", [Validators.required]]
   });
   constructor(private fb: FormBuilder,
-    private servicioSeguridad:SeguridadService) { }
+    private servicioSeguridad:SeguridadService,
+    private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -28,9 +30,12 @@ export class LoginComponent implements OnInit {
     // alert(claveCifrada)
 
     this.servicioSeguridad.Identificar(usuario,claveCifrada).subscribe((datos:any)=>{
-      alert("Datos validos")
+      //ToDo guardar en local storage
+      this.servicioSeguridad.AlmacenarInfoSesion(datos);
+      this.router.navigate(["/inicio"]);
+      
     },(error:any)=>{
-      alert("Error: " + error.error.error.message)
+      alert(`Error: ${error.error.error.message}`)
       console.error('An error occurred:', error.error);
     })
 

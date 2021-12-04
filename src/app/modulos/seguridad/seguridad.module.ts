@@ -5,12 +5,14 @@ import { SeguridadRoutingModule } from './seguridad-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RecordarContrasenaComponent } from './recordar-contrasena/recordar-contrasena.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RecordarContrasenaComponent
+    RecordarContrasenaComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,

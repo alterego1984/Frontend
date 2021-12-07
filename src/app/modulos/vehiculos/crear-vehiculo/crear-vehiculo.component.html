@@ -1,0 +1,23 @@
+<form [formGroup]="fgValidador" (ngSubmit)="GuardarVehiculo()" class="row g-3">
+    <div class="col-md-3">
+        <label for="txtplaca" class="form-label">Placa</label>
+        <input type="text" name="txtplaca" class="form-control" formControlName="placa">
+    </div>
+    <div class="col-md-3">
+        <label for="txtmarca" class="form-label">Marca</label>
+        <input type="text" name="txtmarca" class="form-control" formControlName="marca">
+    </div>
+    <div class="col-md-3">
+        <label for="txtreferencia" class="form-label">Referencia</label>
+        <input type="text" name="txtreferencia" class="form-control" formControlName="referencia">
+    </div>
+    <div class="col-md-3">
+        <label for="txtmodelo" class="form-label">Modelo</label>
+        <input type="text" name="txtmodelo" class="form-control" formControlName="modelo">
+    </div>
+
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Crear vehículo</button>
+        <a class="btn btn-light" routerLink="/vehiculos/listar-vehiculos">Atrás</a>
+    </div>
+</form>

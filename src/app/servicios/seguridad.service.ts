@@ -52,6 +52,16 @@ export class SeguridadService {
     }
   }
 
+  ObtenerToken(){
+    let datos_str=localStorage.getItem("datosSesion");
+    if(datos_str){
+      let datos=JSON.parse(datos_str);
+      return datos.tk;
+    }else{
+      return "";
+    }
+  }
+
   VerificarInfoSesion(){
     let datos_str=localStorage.getItem("datosSesion");
     if(datos_str){

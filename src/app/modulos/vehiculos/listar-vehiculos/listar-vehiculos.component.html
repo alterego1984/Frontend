@@ -1,0 +1,55 @@
+<br>
+<br>
+
+<h3>Lista de vehículos</h3>
+<br>
+<a class="btn btn-primary" routerLink="/vehiculos/crear-vehiculo">Crear Vehículo</a>
+<br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Placa
+            </th>
+            <th>
+                Marca
+            </th>
+            <th>
+                Referencia
+            </th>
+            <th>
+                Modelo
+            </th>
+            <th>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of listaVehiculos">
+            <td>
+                {{v.id}}
+            </td>
+            <td>
+                {{v.placa}}
+            </td>
+            <td>
+                {{v.marca}}
+            </td>
+            <td>
+                {{v.referencia}}
+            </td>
+            <td>
+                {{v.modelo}}
+            </td>
+            <td>
+                <a class="btn btn-primary" routerLink="/vehiculos/editar-vehiculo/{{v.id}}">Editar</a>
+                <a class="btn btn-danger" routerLink="/vehiculos/eliminar-vehiculo/{{v.id}}">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

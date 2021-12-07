@@ -26,6 +26,10 @@ const routes: Routes = [
     loadChildren: ()=>import("./modulos/solicitud/solicitud.module").then(x=>x.SolicitudModule)
   },
   {
+    path:"vehiculos",
+    loadChildren: ()=>import("./modulos/vehiculos/vehiculos.module").then(x=>x.VehiculosModule)
+  },
+  {
     path:"**",
     component:ErrorComponent
   }

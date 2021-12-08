@@ -30,25 +30,25 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let v of listaVehiculos">
+        <tr *ngFor="let vehiculo of listaVehiculos">
             <td>
-                {{v.id}}
+                {{vehiculo.id}}
             </td>
             <td>
-                {{v.placa}}
+                {{vehiculo.placa}}
             </td>
             <td>
-                {{v.marca}}
+                {{vehiculo.marca}}
             </td>
             <td>
-                {{v.referencia}}
+                {{vehiculo.referencia}}
             </td>
             <td>
-                {{v.modelo}}
+                {{vehiculo.modelo}}
             </td>
             <td>
-                <a class="btn btn-primary" routerLink="/vehiculos/editar-vehiculo/{{v.id}}">Editar</a>
-                <a class="btn btn-danger" routerLink="/vehiculos/eliminar-vehiculo/{{v.id}}">Eliminar</a>
+                <a class="btn btn-primary" routerLink="/vehiculos/editar-vehiculo/{{vehiculo.id}}">Editar</a>
+                <a class="btn btn-danger" routerLink="/vehiculos/eliminar-vehiculo/{{vehiculo.id}}">Eliminar</a>
             </td>
         </tr>
     </tbody>

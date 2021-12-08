@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from './guardianes/validador-sesion.guard';
 import { ErrorComponent } from './template/error/error.component';
 import { InicioComponent } from './template/inicio/inicio.component';
 

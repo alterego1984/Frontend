@@ -11,7 +11,7 @@ import { VehiculosService } from 'src/app/servicios/vehiculos.service';
 })
 export class CrearVehiculoComponent implements OnInit {
   fgValidador:FormGroup=this.fb.group({
-    "placa":["",[Validators.required]],
+    "placa_formulario":["",[Validators.required]],
     "marca":["",[Validators.required]],
     "referencia":["",[Validators.required]],
     "modelo":["",[Validators.required]]
@@ -25,13 +25,13 @@ export class CrearVehiculoComponent implements OnInit {
   }
 
   GuardarVehiculo(){
-    let placa=this.fgValidador.controls["placa"].value;
+    let placa_variable_local=this.fgValidador.controls["placa_formulario"].value;
     let marca=this.fgValidador.controls["marca"].value;
     let referencia=this.fgValidador.controls["referencia"].value;
     let modelo=parseInt(this.fgValidador.controls["modelo"].value);
 
     let v=new ModeloVehiculo();
-    v.placa=placa;
+    v.placa=placa_variable_local;
     v.marca=marca;
     v.referencia=referencia;
     v.modelo=modelo;
